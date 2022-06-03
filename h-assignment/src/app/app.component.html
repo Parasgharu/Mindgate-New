@@ -1,0 +1,18 @@
+
+<button (click)="onToggleDisplay()">Display Details</button>
+<!-- <p *ngIf="displayDetails; else hide">Secret password -Paras123</p>
+<ng-template #hide>
+<p></p>
+</ng-template>
+<p *ngFor="let x of count">{{x}}</p>
+
+<p [ngStyle]="{backgroundColor: getColor()}">{{this.numberOfTimesClickes}}</p> -->
+
+<p *ngIf="showSecret">Secret Password=</p>
+<div *ngFor="let count of counter">
+    <p [ngStyle]="{backgroundColor: getColor(count)}">{{count}}</p>
+</div>
+
+<div *ngFor="let i of numbersArray">
+    <p [ngStyle]="{backgroundColor: i % 2 ==0 ? 'yellow':'blue'}">{{i}}</p>
+</div>
